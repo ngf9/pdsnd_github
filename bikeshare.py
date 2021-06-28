@@ -17,6 +17,7 @@ MONTH_TO_NUMBER = {
     'june': 6
 }
 
+# This method will get the filters for the data
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
