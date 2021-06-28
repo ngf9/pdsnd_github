@@ -35,7 +35,7 @@ def get_filters():
             break
             
     # TO DO: get user input for month (all, january, february, ... , june)
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august']
     while True:
         month = input('Enter month to get that months result \n {} \n>'.format(months))
         if month in months:
