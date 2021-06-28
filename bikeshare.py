@@ -36,7 +36,7 @@ def get_filters():
             break
             
     # TO DO: get user input for month (all, january, february, ... , june)
-    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
+    months = ['all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august']
     while True:
         month = input('Enter month to get that months result \n {} \n>'.format(months))
         if month in months:
@@ -74,12 +74,10 @@ def load_data(city, month, day):
     city_data['day_of_week'] = city_data['Start Time'].dt.weekday_name
     city_data['hour'] = city_data['Start Time'].dt.hour
     
-    print(city_data.head())
     
     if month != "all":
         city_data = city_data[city_data.month == MONTH_TO_NUMBER[month]]
         
-    print(city_data.head())
     
     return city_data
 
