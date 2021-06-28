@@ -73,12 +73,10 @@ def load_data(city, month, day):
     city_data['day_of_week'] = city_data['Start Time'].dt.weekday_name
     city_data['hour'] = city_data['Start Time'].dt.hour
     
-    print(city_data.head())
     
     if month != "all":
         city_data = city_data[city_data.month == MONTH_TO_NUMBER[month]]
         
-    print(city_data.head())
     
     return city_data
 
